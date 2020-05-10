@@ -33,7 +33,7 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-          <div class="sidebar-brand-text">Pinnacle Financial Services</div>
+          <div class="sidebar-brand-text">Pinnacle Financial Group</div>
         </a>
   
         <!-- Divider -->
@@ -342,8 +342,8 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Calling/Prospecting</h1>
-          <p class="mb-4">For Calling/Prospecting and Making of Appoinments.</p>
+          <h1 class="h3 mb-2 text-gray-800">Opening/Closing/Sales</h1>
+          <p class="mb-4">For Opening, Closing or Sales Closed Tracking.</p>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4 col-md-10 offset-md-1">
@@ -352,44 +352,15 @@
             </div>
             <div class="card-body">
               <form class="user col-md-10 offset-md-1">
-                <div class="form-group row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
-                    </div>
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
-                    </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="clientName" placeholder="Client Name">
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address">
+                    <input type="text" class="form-control form-control-user" id="appointmentType" placeholder="Appointment Type">
                   </div>
-                  <div class="form-group row">
-                    <div class="col-sm-2 mb-3 mb-sm-0">
-                      <input type="text" class="form-control form-control-user" id="countryCode" placeholder="+65(SG)">
-                    </div>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control form-control-user" id="phoneNumber" placeholder="Phone Number">
-                    </div>
-                  </div>
-                  <br>
-                  <div class="text-center form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields(this)">
-                    <label class="form-check-label" for="exampleCheck1">Client Interested for appointment?</label>
-                  </div>
-                  <div id="hiddenFields" style="display:none;">
-                  <br>
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="location" placeholder="Location">
+                    <textarea type="text" class="form-control form-control-user" id="appointmentRemark" placeholder="Remarks..."></textarea>
                   </div>
-                  <div class="form-group row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="text" class="form-control form-control-user" id="datepicker" placeholder="Date">
-                    </div>
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
-                    </div>
-                  </div>
-                </div>
                   <br>
                   <button class="btn btn-primary btn-user btn-block">Submit Input</button>
               </form>
@@ -459,22 +430,7 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
 
-  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-
   <script>
-      function displayHiddenFields(element){
-          var hiddenFields = document.getElementById("hiddenFields");
-        if (element.checked == true){
-            hiddenFields.style.display = "block";
-        } else{
-            hiddenFields.style.display = "none";
-        }
-      }
-
-      $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4'
-        });
   </script>
 
 </body>
