@@ -361,9 +361,28 @@
                     </div> 
                 </div>
                 <br>
+                <div style="display:none;" id="hiddenFields">
+                    <h4 class="font-weight-bold text-primary text-center">Topic 2</h4>
+                    <br>
+                    <div class="chapter">
+                        <div class="form-group">
+                            <h6 class="font-weight-bold text-secondary">Talk about 1 to 2 things that you learn or gain or stands up to you.</h6>
+                            <textarea style="height:7rem;" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter your answer here..."></textarea>
+                        </div> 
+                        <div class="form-group">
+                            <h6 class="font-weight-bold text-secondary">How it will help you connect to your real life. And share a life scenario.</h6>
+                            <textarea style="height:7rem;" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter your answer here..."></textarea>
+                        </div> 
+                        <div class="form-group">
+                            <h6 class="font-weight-bold text-secondary">If not knowing this, what’s the disadvantage. (how you will unknowingly hurt yourself and a person's happiness).</h6>
+                            <textarea style="height:7rem;" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter your answer here..."></textarea>
+                        </div> 
+                    </div>
+                    <br>
+                </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <button style="width:12rem; float:right;" class="btn btn-secondary btn-user btn-block">Add Topic</button>
+                        <button type="button" style="width:12rem; float:right;" onclick="displayHiddenFields()" class="btn btn-secondary btn-user btn-block">Add Topic</button>
                     </div>
                     <div class="col-md-6">
                         <button style="width:12rem; float:left;" class="btn btn-primary btn-user btn-block">Submit Input</button>
@@ -439,6 +458,13 @@
   <!-- Date Picker -->
   <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+  <script>
+    function displayHiddenFields(){
+        var hiddenFields = document.getElementById("hiddenFields");
+        hiddenFields.style.display = "block";
+    }
+</script>
 
 </body>
 
