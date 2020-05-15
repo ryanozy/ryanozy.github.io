@@ -557,13 +557,21 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
+                      <td>Ryan Ong</td>
+                      <td>Fruits</td>
+                      <td>14th May 2020 2:00PM</td>
                       <td>
-                        <button data-toggle="modal" data-target="#learningModal" class="align-items-center btn btn-info btn-circle">
-                            <i class="fas fa-search"></i>
-                        </button>
+                        <div class="dropdown mb-4">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="durationButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Chapters
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="durationButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                            <a class="dropdown-item" data-toggle="modal" data-target="#learningModal">Chapter 1</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#learningModal">Chapter 2</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#learningModal">Chapter 3</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#learningModal">Chapter 4</a>
+                          </div>
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -823,7 +831,7 @@
         <div class="modal-body">
           <table class="table table-responsive">
             <tr>
-                <td class="font-weight-bold">Topic/Source</td>
+                <td class="font-weight-bold">Chapter</td>
                 <td>Apples</td>
               </tr>
               <tr>
