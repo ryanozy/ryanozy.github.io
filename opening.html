@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Tables</title>
+  <title>Opening Page</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,6 +20,43 @@
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <style>
+    #upload {
+  opacity: 0;
+}
+
+#upload-label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.image-area {
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  position: relative;
+}
+
+.image-area::before {
+  content: 'Uploaded image result';
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.image-area img {
+  z-index: 2;
+  position: relative;
+}
+</style>
 
 </head>
 
@@ -44,7 +81,7 @@
         </div>
   
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -88,28 +125,51 @@
             <span>Exercise</span></a>
         </li>
   
-  
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-  
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Admin
+    <!-- Nav Item - Marketing -->
+    <li class="nav-item">
+      <a class="nav-link" href="marketing.html">
+        <i class="fas fa-fw fa-ad"></i>
+        <span>Marketing</span></a>
+    </li>
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Admin
+    </div>
+
+    <!-- Nav Item - Dashboard-->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboards</span>
+      </a>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Different Dashboards</h6>
+          <a class="collapse-item" href="managerdashboard.html">Managerial</a>
+          <a class="collapse-item" href="admindashboard.html">Administrator</a>
         </div>
-  
-        <!-- Nav Item - Managerial Dashboard -->
-        <li class="nav-item">
-          <a class="nav-link" href="managerdashboard.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Managerial Dashboard</span></a>
-        </li>
-  
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-          <a class="nav-link" href="admindashboard.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Administator Dashboard</span></a>
-        </li>
+      </div>
+    </li>
+    
+    <!-- Nav Item - Meeting-->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fas fa-fw fa-comment"></i>
+        <span>Meetings</span>
+      </a>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Meeting Activity</h6>
+          <a class="collapse-item" href="createmeeting.html">Create Meeting</a>
+          <a class="collapse-item" href="choosemeeting.html">Planned Meetings</a>
+        </div>
+      </div>
+    </li>
   
         <!-- Nav Item - Tables -->
         <li class="nav-item">
@@ -268,14 +328,26 @@
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user" id="clientName" placeholder="Client Name">
                   </div>
-                  <div class="form-group">
-                    <!-- <input type="text" class="form-control form-control-user" id="appointmentType" placeholder="Appointment Type"> -->
-                      <select class="custom-select" id="inputGroupSelect04">
-                        <option selected>Appointment Type</option>
-                        <option value="1">Opening</option>
-                        <option value="2">Closing</option>
-                        <option value="3">Sales</option>
-                      </select>
+                    <div class="form-group form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="individualMeeting" onclick="displayHiddenFields2(this)">
+                      <label class="form-check-label" for="inlineRadio1">Opening</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="teamMeeting" onclick="displayHiddenFields2(this)">
+                      <label class="form-check-label" for="inlineRadio2">Closing</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="individualMeeting" onclick="displayHiddenFields(this)">
+                      <label class="form-check-label" for="inlineRadio1">Sales Closed</label>
+                  </div>
+                  <div id="hiddenFields" style="display:none;">
+                    <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                      <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                      <label id="upload-label" for="upload" class="font-weight-light text-muted"></label>
+                      <div class="input-group-append">
+                          <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                      </div>
+                  </div>
                   </div>
                   <div class="form-group">
                     <textarea type="text" class="form-control form-control-user" id="appointmentRemark" placeholder="Remarks..."></textarea>
@@ -350,6 +422,63 @@
   <script src="js/demo/datatables-demo.js"></script>
 
   <script>
+    function displayHiddenFields(element){
+          var hiddenFields = document.getElementById("hiddenFields");
+        if (element.checked == true){
+            hiddenFields.style.display = "block";
+        } else{
+            hiddenFields.style.display = "none";
+        }
+      }
+
+      function displayHiddenFields2(element){
+          var hiddenFields = document.getElementById("hiddenFields");
+        if (element.checked == true){
+            hiddenFields.style.display = "none";
+        } else{
+            hiddenFields.style.display = "none";
+        }
+      }
+
+      $(function () {
+    $('#upload').on('change', function () {
+        readURL(input);
+    });
+});
+
+           /*  ==========================================
+    SHOW UPLOADED IMAGE
+* ========================================== */
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#imageResult')
+                .attr('src', e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$(function () {
+    $('#upload').on('change', function () {
+        readURL(input);
+    });
+});
+
+/*  ==========================================
+    SHOW UPLOADED IMAGE NAME
+* ========================================== */
+var input = document.getElementById( 'upload' );
+var infoArea = document.getElementById( 'upload-label' );
+
+input.addEventListener( 'change', showFileName );
+function showFileName( event ) {
+  var input = event.srcElement;
+  var fileName = input.files[0].name;
+  infoArea.textContent = 'File name: ' + fileName;
+}
   </script>
 
 </body>
