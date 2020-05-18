@@ -94,18 +94,32 @@
         Admin
       </div>
 
-      <!-- Nav Item - Managerial Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="managerdashboard.html">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Managerial Dashboard</span></a>
+          <span>Dashboards</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Different Dashboards</h6>
+            <a class="collapse-item" href="managerdashboard.html">Managerial</a>
+            <a class="collapse-item" href="admindashboard.html">Administrator</a>
+          </div>
+        </div>
       </li>
-
-      <!-- Nav Item - Charts -->
+      
       <li class="nav-item">
-        <a class="nav-link" href="admindashboard.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Administator Dashboard</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-comment"></i>
+          <span>Meetings</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Meeting Activity</h6>
+            <a class="collapse-item" href="managerdashboard.html">Create Meeting</a>
+            <a class="collapse-item" href="admindashboard.html">Log Meeting</a>
+          </div>
+        </div>
       </li>
 
       <!-- Nav Item - Tables -->
@@ -113,6 +127,13 @@
         <a class="nav-link" href="createaccount.html">
           <i class="fas fa-fw fa-user"></i>
           <span>Account Creation</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="coaching.html">
+          <i class="fas fa-fw fa-chalkboard-teacher"></i>
+          <span>Coaching</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
@@ -426,17 +447,17 @@
               <!-- Appointments -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Upcoming Appointments</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Upcoming Appointments/Meetings</h6>
                 </div>
                 <div class="card-body">
                   <div class="appointment">
                       <h5 class="font-weight-bold">Appointment with Hakam Hasbullah</h5>
-                      <h6 clas="">March 25, 2020</h6>
+                      <h6 clas="">March 25, 2020 2:00PM</h6>
                   </div>
                   <hr>
                   <div class="appointment">
-                    <h5 class="font-weight-bold">Appointment with Russell Arvin</h5>
-                    <h6 clas="">April 27, 2020</h6>
+                    <h5 class="font-weight-bold">Meeting with Manager</h5>
+                    <h6 clas="">April 27, 2020 5:00PM</h6>
                 </div>
                 </div>
               </div>
