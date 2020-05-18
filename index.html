@@ -85,6 +85,13 @@
           <span>Exercise</span></a>
       </li>
 
+      <!-- Nav Item - Marketing -->
+      <li class="nav-item">
+        <a class="nav-link" href="marketing.html">
+          <i class="fas fa-fw fa-ad"></i>
+          <span>Marketing</span></a>
+      </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -94,18 +101,32 @@
         Admin
       </div>
 
-      <!-- Nav Item - Managerial Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="managerdashboard.html">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Managerial Dashboard</span></a>
+          <span>Dashboards</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Different Dashboards</h6>
+            <a class="collapse-item" href="managerdashboard.html">Managerial</a>
+            <a class="collapse-item" href="admindashboard.html">Administrator</a>
+          </div>
+        </div>
       </li>
-
-      <!-- Nav Item - Charts -->
+      
       <li class="nav-item">
-        <a class="nav-link" href="admindashboard.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Administator Dashboard</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-comment"></i>
+          <span>Meetings</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Meeting Activity</h6>
+            <a class="collapse-item" href="createmeeting.html">Create Meeting</a>
+            <a class="collapse-item" href="choosemeeting.html">Planned Meetings</a>
+          </div>
+        </div>
       </li>
 
       <!-- Nav Item - Tables -->
@@ -113,6 +134,13 @@
         <a class="nav-link" href="createaccount.html">
           <i class="fas fa-fw fa-user"></i>
           <span>Account Creation</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="coaching.html">
+          <i class="fas fa-fw fa-chalkboard-teacher"></i>
+          <span>Coaching</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
@@ -189,7 +217,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">2+</span>
+                <span class="badge badge-danger badge-counter">3+</span>
               </a>
               <!-- Dropdown - Alerts -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
@@ -205,6 +233,17 @@
                   <div>
                     <div class="small text-gray-500">December 12, 2019</div>
                     <span class="font-weight-bold">You have completed your required activities for the week!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-info text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Meeting Alert: You have an upcomming Meeting with your manager on April 2nd 2020 2:00PM
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -253,8 +292,18 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Welcome Manfred!</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <h1 class="h3 mb-0 text-gray-800">Welcome Valerie!</h1>
+            <div class="dropdown mb-4">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="durationButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Durations
+                </button>
+                <div class="dropdown-menu" aria-labelledby="durationButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                  <a class="dropdown-item" href="#">Weekly</a>
+                  <a class="dropdown-item" href="#">Monthly</a>
+                  <a class="dropdown-item" href="#">Yearly</a>
+                  <a class="dropdown-item" href="#">All Time</a>
+                </div>
+              </div>
           </div>
 
           <!-- Content Row -->
@@ -357,7 +406,7 @@
                       </button>
                     </div>
                     <div class="col-sm-10">
-                      <h5 style="padding-top:1rem;padding-left:0.5rem;"><span class="font-weight-bold">Manfred Koh</span> has called <span class="font-weight-bold">Hakam Hasbullah</span></h5>
+                      <h5 style="padding-top:1rem;padding-left:0.5rem;"><span class="font-weight-bold">Valerie Luna</span> has called <span class="font-weight-bold">9123 4567</span></h5>
                     </div>
                   </div>
                   <hr>
@@ -368,7 +417,7 @@
                       </button>
                     </div>
                     <div class="col-sm-10">
-                      <h5 style="padding-top:0.5rem;padding-left:0.5rem;"><span class="font-weight-bold">Manfred Koh</span> has successfully made an appointment with <span class="font-weight-bold">Hakam Hasbullah</span></h5>
+                      <h5 style="padding-top:0.5rem;padding-left:0.5rem;"><span class="font-weight-bold">Valerie Luna</span> has successfully made an appointment with <span class="font-weight-bold">Hakam Hasbullah</span></h5>
                     </div>
                   </div>
                   <hr>
@@ -379,7 +428,7 @@
                       </button>
                     </div>
                     <div class="col-sm-10">
-                      <h5 style="padding-top:0.5rem;padding-left:0.5rem;"><span class="font-weight-bold">Manfred Koh</span> has successfully made an appointment with <span class="font-weight-bold">Hakam Hasbullah</span></h5>
+                      <h5 style="padding-top:0.5rem;padding-left:0.5rem;"><span class="font-weight-bold">Valerie Luna</span> has successfully made an appointment with <span class="font-weight-bold">Hakam Hasbullah</span></h5>
                     </div>
                   </div>
                   <hr>
@@ -390,7 +439,7 @@
                       </button>
                     </div>
                     <div class="col-sm-10">
-                      <h5 style="padding-top:1rem;padding-left:0.5rem;"><span class="font-weight-bold">Manfred Koh</span> has called <span class="font-weight-bold">Hakam Hasbullah</span></h5>
+                      <h5 style="padding-top:1rem;padding-left:0.5rem;"><span class="font-weight-bold">Valerie Luna</span> has called <span class="font-weight-bold">9123 4567</span></h5>
                     </div>
                   </div>
                   <hr>
@@ -401,7 +450,7 @@
                       </button>
                     </div>
                     <div class="col-sm-10">
-                      <h5 style="padding-top:1rem;padding-left:0.5rem;"><span class="font-weight-bold">Manfred Koh</span> has called <span class="font-weight-bold">Hakam Hasbullah</span></h5>
+                      <h5 style="padding-top:1rem;padding-left:0.5rem;"><span class="font-weight-bold">Valerie Luna</span> has called <span class="font-weight-bold">9123 4567</span></h5>
                     </div>
                   </div>
                   <hr>
@@ -412,7 +461,7 @@
                       </button>
                     </div>
                     <div class="col-sm-10">
-                      <h5 style="padding-top:0.5rem;padding-left:0.5rem;"><span class="font-weight-bold">Manfred Koh</span> has successfully made an appointment with <span class="font-weight-bold">Hakam Hasbullah</span></h5>
+                      <h5 style="padding-top:0.5rem;padding-left:0.5rem;"><span class="font-weight-bold">Valerie Luna</span> has successfully made an appointment with <span class="font-weight-bold">Hakam Hasbullah</span></h5>
                     </div>
                   </div>
                   <br>
@@ -426,17 +475,17 @@
               <!-- Appointments -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Upcoming Appointments</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Upcoming Appointments/Meetings</h6>
                 </div>
                 <div class="card-body">
                   <div class="appointment">
                       <h5 class="font-weight-bold">Appointment with Hakam Hasbullah</h5>
-                      <h6 clas="">March 25, 2020</h6>
+                      <h6 clas="">March 25, 2020 2:00PM</h6>
                   </div>
                   <hr>
                   <div class="appointment">
-                    <h5 class="font-weight-bold">Appointment with Russell Arvin</h5>
-                    <h6 clas="">April 27, 2020</h6>
+                    <h5 class="font-weight-bold">Meeting with Manager</h5>
+                    <h6 clas="">April 27, 2020 5:00PM</h6>
                 </div>
                 </div>
               </div>
