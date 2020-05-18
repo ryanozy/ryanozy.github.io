@@ -268,6 +268,12 @@
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user" id="clientName" placeholder="Client Name">
                   </div>
+                  <div class="text-center form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields(this)">
+                    <label class="form-check-label" for="exampleCheck1">Client Interested in Physical Appointment?</label>
+                  </div>
+                  <br>
+                  <div id="hiddenFields" style="display:none;">
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user" id="appointmentLocation" placeholder="Location">
                   </div>
@@ -279,6 +285,7 @@
                       <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
                     </div>
                   </div>
+                </div>
                   <br>
                   <button class="btn btn-primary btn-user btn-block">Submit Input</button>
               </form>
@@ -353,6 +360,15 @@
   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
   <script>
+    function displayHiddenFields(element){
+          var hiddenFields = document.getElementById("hiddenFields");
+        if (element.checked == true){
+            hiddenFields.style.display = "block";
+        } else{
+            hiddenFields.style.display = "none";
+        }
+      }
+
             $('#datepicker').datepicker({
             uiLibrary: 'bootstrap4'
         });
