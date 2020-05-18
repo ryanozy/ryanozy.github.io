@@ -88,28 +88,51 @@
             <span>Exercise</span></a>
         </li>
   
-  
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-  
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Admin
+      <!-- Nav Item - Marketing -->
+      <li class="nav-item">
+        <a class="nav-link" href="marketing.html">
+          <i class="fas fa-fw fa-ad"></i>
+          <span>Marketing</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Admin
+      </div>
+
+      <!-- Nav Item - Dashboard-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboards</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Different Dashboards</h6>
+            <a class="collapse-item" href="managerdashboard.html">Managerial</a>
+            <a class="collapse-item" href="admindashboard.html">Administrator</a>
+          </div>
         </div>
-  
-        <!-- Nav Item - Managerial Dashboard -->
-        <li class="nav-item">
-          <a class="nav-link" href="managerdashboard.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Managerial Dashboard</span></a>
-        </li>
-  
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-          <a class="nav-link" href="admindashboard.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Administator Dashboard</span></a>
-        </li>
+      </li>
+      
+      <!-- Nav Item - Meeting-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-comment"></i>
+          <span>Meetings</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Meeting Activity</h6>
+            <a class="collapse-item" href="createmeeting.html">Create Meeting</a>
+            <a class="collapse-item" href="choosemeeting.html">Planned Meetings</a>
+          </div>
+        </div>
+      </li>
+
   
         <!-- Nav Item - Tables -->
         <li class="nav-item">
@@ -187,46 +210,56 @@
               </div>
             </li>
 
-           <!-- Nav Item - Alerts -->
-           <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-bell fa-fw"></i>
-              <!-- Counter - Alerts -->
-              <span class="badge badge-danger badge-counter">2+</span>
-            </a>
-            <!-- Dropdown - Alerts -->
-            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-              <h6 class="dropdown-header">
-                Alerts Center
-              </h6>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="mr-3">
-                  <div class="icon-circle bg-success">
-                    <i class="fas fa-file-alt text-white"></i>
-                  </div>
-                </div>
-                <div>
-                  <div class="small text-gray-500">December 12, 2019</div>
-                  <span class="font-weight-bold">You have completed your required activities for the week!</span>
-                </div>
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
               </a>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="mr-3">
-                  <div class="icon-circle bg-warning">
-                    <i class="fas fa-exclamation-triangle text-white"></i>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <div class="small text-gray-500">December 2, 2019</div>
-                  Warning Alert: You are behind on your required activites for the week!
-                </div>
-              </a>
-              <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-            </div>
-          </li>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">You have completed your required activities for the week!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-info text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Meeting Alert: You have an upcomming Meeting with your manager on April 2nd 2020 2:00PM
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Warning Alert: You are behind on your required activites for the week!
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
 
-          <div class="topbar-divider d-none d-sm-block"></div>
-
+            <div class="topbar-divider d-none d-sm-block"></div>
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
