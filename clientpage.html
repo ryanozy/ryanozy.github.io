@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>User Dashboard</title>
+  <title>Client's Page</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@
       </div>
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -50,7 +50,7 @@
 
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="yourclients.html">
           <i class="fas fa-fw fa-users"></i>
           <span>Your Clients</span></a>
@@ -85,6 +85,12 @@
           <span>Exercise</span></a>
       </li>
 
+      <!-- Nav Item - Marketing -->
+      <li class="nav-item">
+        <a class="nav-link" href="marketing.html">
+          <i class="fas fa-fw fa-ad"></i>
+          <span>Marketing</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -94,18 +100,34 @@
         Admin
       </div>
 
-      <!-- Nav Item - Managerial Dashboard -->
+      <!-- Nav Item - Dashboard-->
       <li class="nav-item">
-        <a class="nav-link" href="managerdashboard.html">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Managerial Dashboard</span></a>
+          <span>Dashboards</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Different Dashboards</h6>
+            <a class="collapse-item" href="managerdashboard.html">Managerial</a>
+            <a class="collapse-item" href="admindashboard.html">Administrator</a>
+          </div>
+        </div>
       </li>
-
-      <!-- Nav Item - Charts -->
+      
+      <!-- Nav Item - Meeting-->
       <li class="nav-item">
-        <a class="nav-link" href="admindashboard.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Administator Dashboard</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-comment"></i>
+          <span>Meetings</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Meeting Activity</h6>
+            <a class="collapse-item" href="createmeeting.html">Create Meeting</a>
+            <a class="collapse-item" href="choosemeeting.html">Planned Meetings</a>
+          </div>
+        </div>
       </li>
 
       <!-- Nav Item - Tables -->
@@ -253,7 +275,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Welcome Ryan!</h1>
+            <h1 class="h3 mb-0 text-gray-800">Client Page</h1>
           </div>
 
           <!-- Content Row -->
@@ -342,7 +364,7 @@
                 <div class="card-body">
                   <div class="activity row">
                     <div class="col-sm-2">
-                      <a href="#">
+                      <a href="calling.html">
                       <button class="btn btn-success btn-circle btn-lg">
                         <i class="fas fa-search"></i>
                       </button>
@@ -355,7 +377,7 @@
                   <hr>
                   <div class="activity row">
                     <div class="col-sm-2">
-                      <a href="#">
+                      <a href="followup.html">
                         <button class="btn btn-info btn-circle btn-lg">
                           <i class="fas fa-search"></i>
                         </button>
