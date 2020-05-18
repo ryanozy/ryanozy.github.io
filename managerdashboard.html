@@ -444,10 +444,13 @@
                       </div>
                       <div class="mt-4 text-center small">
                         <span class="mr-2">
-                          <i class="fas fa-circle text-primary"></i> Sales Closed
+                          <i class="fas fa-circle text-primary"></i> Russell Arvin
                         </span>
                         <span class="mr-2">
-                          <i class="fas fa-circle text-success"></i> Sales Not Closed
+                          <i class="fas fa-circle text-success"></i> Manfred Koh
+                        </span>
+                        <span class="mr-2">
+                          <i class="fas fa-circle text-info"></i> Ryan Ong
                         </span>
                       </div>
                     </div>
@@ -1145,9 +1148,9 @@ var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Sales Closed", "Sales Not Closed"],
+    labels: ["Russell Arvin", "Manfred Koh", "Ryan Ong"],
     datasets: [{
-      data: [30, 70],
+      data: [5, 2, 4],
       backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
