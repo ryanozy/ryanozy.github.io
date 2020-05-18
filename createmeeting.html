@@ -255,7 +255,7 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Creat Meeting</h1>
+          <h1 class="h3 mb-2 text-gray-800">Create Meeting</h1>
           <p class="mb-4">For Tracking the Creation of Meetings.</p>
 
           <!-- DataTales Example -->
@@ -268,11 +268,31 @@
                 <div class="form-group">
                     <input type="text" class="form-control form-control-user" id="meetingTitle" placeholder="Meeting Title">
                   </div>  
-                <div class="form-group">
-                    <select class="form-control" id="meetingType">
-                        <option>Individual Meeting</option>
-                        <option>Team Meeting</option>
-                      </select>
+                  <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="individualMeeting" onclick="displayHiddenFields(this)">
+                    <label class="form-check-label" for="inlineRadio1">Individual Meeting</label>
+                  </div>
+                  <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="teamMeeting" onclick="displayHiddenFields2(this)">
+                    <label class="form-check-label" for="inlineRadio2">Team Meeting</label>
+                  </div>
+                  <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="individualMeeting" onclick="displayHiddenFields2(this)">
+                    <label class="form-check-label" for="inlineRadio1">Manager Meeting</label>
+                  </div>
+                  <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="teamMeeting" onclick="displayHiddenFields2(this)">
+                    <label class="form-check-label" for="inlineRadio2">Overall Meeting</label>
+                  </div>
+                  <div id="hiddenFields" style="display:none;">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="staffName" placeholder="Staff Name">
+                    </div>
+                  </div>
+                  <div id="hiddenFields2" style="display:none;">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#meetingModal">Choose Attendees</button>
+                    </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -334,6 +354,54 @@
     </div>
   </div>
 
+  <!-- Team Meeting Modal-->
+  <div class="modal fade" id="meetingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Choose Meeting Attendees</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Uncheck those who aren't attending the meeting.</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Attending</th>
+                  <th>Name</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                  <td>Ryan Ong</td>
+                  <td>Staff</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                  <td>Ryan Ong</td>
+                  <td>Staff</td>
+                </tr>
+              </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -356,6 +424,28 @@
   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
   
   <script>
+      function displayHiddenFields(element){
+          var hiddenFields = document.getElementById("hiddenFields");
+          var hiddenFields2 = document.getElementById("hiddenFields2");
+        if (element.checked == true){
+            hiddenFields.style.display = "block";
+            hiddenFields2.style.display = "none";
+        } else{
+            hiddenFields.style.display = "none";
+        }
+      }
+
+      function displayHiddenFields2(element){
+          var hiddenFields = document.getElementById("hiddenFields");
+          var hiddenFields2 = document.getElementById("hiddenFields2");
+        if (element.checked == true){
+            hiddenFields2.style.display = "block";
+            hiddenFields.style.display = "none";
+        } else{
+            hiddenFields.style.display = "none";
+        }
+      }
+
       $('#datepicker').datepicker({
             uiLibrary: 'bootstrap4'
         });
