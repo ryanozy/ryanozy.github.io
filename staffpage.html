@@ -538,14 +538,15 @@
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="#">Different View</a>
-                      <a class="dropdown-item" href="#">See Different View</a>
+                      <a class="dropdown-item" onclick="barChartChange1()">First Half of Activities</a>
+                      <a class="dropdown-item" onclick="barChartChange2()">Second Half of Activities</a>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="chart-bar">
+                  <div id="chart-bar" class="chart-bar">
                     <canvas id="myBarChart"></canvas>
+                    <canvas style="display:none;" id="myBarChart2"></canvas>
                   </div>
                 </div>
               </div>
@@ -948,7 +949,8 @@ var myBarChart = new Chart(ctx, {
   }
 });
 
-var myBarChart2 = new Chart(ctx, {
+var ctx2 = document.getElementById("myBarChart2");
+var myBarChart2 = new Chart(ctx2, {
   type: 'bar',
   data: {
     labels: ["Calls", "Appointments Made", "Follow-Ups", "Openings", "Closings", "Sales", "Refferals"],
@@ -1027,6 +1029,20 @@ var myBarChart2 = new Chart(ctx, {
     },
   }
 });
+
+function barChartChange1(){
+  var barchart1 = document.getElementById("myBarChart");
+  var barchart2 = document.getElementById("myBarChart2");
+  barchart1.style.display = "block";
+  barchart2.style.display="none"
+}
+
+function barChartChange2(){
+  var barchart1 = document.getElementById("myBarChart");
+  var barchart2 = document.getElementById("myBarChart2");
+  barchart1.style.display = "none";
+  barchart2.style.display="block"
+}
 
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
