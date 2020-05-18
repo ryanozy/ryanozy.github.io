@@ -342,6 +342,23 @@
                       <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
                     </div>
                   </div>
+                  <div class="text-center form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields2(this)">
+                    <label class="form-check-label" for="exampleCheck1">Follow-Up Required?</label>
+                  </div>
+                  <div id="hiddenFields2" style="display:none;">
+                    <br>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="location" placeholder="Location">
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="datepicker2" placeholder="Date">
+                      </div>
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
+                      </div>
+                    </div>
                 </div>
                   <br>
                   <button class="btn btn-primary btn-user btn-block">Submit Input</button>
@@ -426,6 +443,18 @@
         }
       }
 
+      function displayHiddenFields2(element){
+          var hiddenFields = document.getElementById("hiddenFields2");
+        if (element.checked == true){
+            hiddenFields.style.display = "block";
+        } else{
+            hiddenFields.style.display = "none";
+        }
+      }
+
+      $('#datepicker2').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
       $('#datepicker').datepicker({
             uiLibrary: 'bootstrap4'
         });
