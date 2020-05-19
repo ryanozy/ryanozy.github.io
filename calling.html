@@ -305,34 +305,33 @@
             </div>
             <div class="card-body">
               <form class="user col-md-10 offset-md-1">
-                <div class="form-group row">
+                  <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+                      <input type="text" class="form-control form-control-user" id="firstName" placeholder="First Name">
                     </div>
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input type="text" class="form-control form-control-user" id="lastName" placeholder="Last Name">
                     </div>
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address">
+                    <input type="text" class="form-control form-control-user" id="clientEmail" placeholder="Email Address">
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-2 mb-3 mb-sm-0">
-                      <input type="text" class="form-control form-control-user" id="countryCode" placeholder="+65(SG)">
+                      <input type="text" class="form-control form-control-user" id="countrycode" placeholder="+65(SG)">
                     </div>
                     <div class="col-sm-10">
                       <input type="text" class="form-control form-control-user" id="phoneNumber" placeholder="Phone Number">
                     </div>
                   </div>
-                  <br>
                   <div class="text-center form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields(this)">
-                    <label class="form-check-label" for="exampleCheck1">Client Interested for Appointment?</label>
+                    <label class="form-check-label" for="exampleCheck1">Client Interested in Physical Appointment?</label>
                   </div>
-                  <div id="hiddenFields" style="display:none;">
                   <br>
+                  <div id="hiddenFields" style="display:none;">
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="location" placeholder="Location">
+                    <input type="text" class="form-control form-control-user" id="appointmentLocation" placeholder="Location">
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -342,24 +341,22 @@
                       <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
                     </div>
                   </div>
-                  <div class="text-center form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields2(this)">
-                    <label class="form-check-label" for="exampleCheck1">Follow-Up Required?</label>
-                  </div>
-                  <div id="hiddenFields2" style="display:none;">
+                    </div>
+                    <div class="text-center form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields2(this)">
+                      <label class="form-check-label" for="exampleCheck1">Is Follow-Up Required?</label>
+                    </div>
                     <br>
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="location" placeholder="Location">
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="text" class="form-control form-control-user" id="datepicker2" placeholder="Date">
+                    <div id="hiddenFields2" style="display:none;">
+                      <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                          <input type="text" class="form-control form-control-user" id="datepicker2" placeholder="Follow-Up Date">
+                        </div>
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                          <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
+                        </div>
                       </div>
-                      <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
-                      </div>
                     </div>
-                </div>
                   <br>
                   <button class="btn btn-primary btn-user btn-block">Submit Input</button>
               </form>
