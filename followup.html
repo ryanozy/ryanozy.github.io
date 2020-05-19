@@ -309,6 +309,21 @@
                     <input type="text" class="form-control form-control-user" id="clientName" placeholder="Client Name">
                   </div>
                   <div class="text-center form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields2(this)">
+                    <label class="form-check-label" for="exampleCheck1">Is Another Follow-Up Required?</label>
+                  </div>
+                  <br>
+                  <div id="hiddenFields2" style="display:none;">
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="datepicker2" placeholder="Next Follow-Up Date">
+                      </div>
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields(this)">
                     <label class="form-check-label" for="exampleCheck1">Client Interested in Physical Appointment?</label>
                   </div>
@@ -325,22 +340,7 @@
                       <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
                     </div>
                   </div>
-                  <div class="text-center form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="displayHiddenFields2(this)">
-                    <label class="form-check-label" for="exampleCheck1">Is Another Follow-Up Required?</label>
-                  </div>
-                  <br>
-                  <div id="hiddenFields2" style="display:none;">
-                    <div class="form-group row">
-                      <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="text" class="form-control form-control-user" id="datepicker2" placeholder="Next Follow-Up Date">
-                      </div>
-                      <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="time" class="form-control form-control-user" id="time" placeholder="Select Time">
-                      </div>
                     </div>
-                  </div>
-                </div>
                   <br>
                   <button class="btn btn-primary btn-user btn-block">Submit Input</button>
               </form>
