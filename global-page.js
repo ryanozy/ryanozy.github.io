@@ -12,8 +12,9 @@ var get = function (selector, scope) {
   // setup typewriter effect in the terminal demo
   if (document.getElementsByClassName('demo').length > 0) {
     var i = 0;
-    var txt = `Hello, I'm a Student currently studying Computing Science at the Singapore Institute of Technology. 
-    I'm interested in Software Development, Web Development and Data Science.
+    var txt = `Hello, I'm a student currently studying Computing Science at the Singapore Institute of Technology. 
+    I'm interested in anything related to technology and I'm always looking to learn new things. I currently have an affinity for web development and I'm always looking to improve my skills.
+    I'm also trained in the field of Cybersecurity and I'm always looking to learn more about it.
     
     Right now, the website is still under construction.
     In the meantime feel free to scroll around
